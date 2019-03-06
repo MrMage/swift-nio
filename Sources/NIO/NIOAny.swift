@@ -194,7 +194,7 @@ public struct NIOAny {
         if let v = tryAsOther(type: type) {
             return v
         } else {
-            fatalError("tried to decode as type \(T.self) but found \(Mirror(reflecting: Mirror(reflecting: self._storage).children.first!.value).subjectType)")
+            fatalError("tried to decode as type \(T.self) but found \(Mirror(reflecting: Mirror(reflecting: self._storage).children.first!.value).subjectType) with contents \(self._storage)")
         }
     }
 
